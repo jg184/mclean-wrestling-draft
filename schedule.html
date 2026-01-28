@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schedule - McLean Highlanders Wrestling</title>
+  <meta name="description" content="McLean Highlanders Wrestling schedule for the 2025-2026 season. Varsity, Girls, and JV schedules plus past season archives.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Schedule Tabs */
+    .schedule-tabs {
+      display: flex;
+      gap: 0;
+      border-bottom: 3px solid var(--red, #CC0000);
+      margin-bottom: 2rem;
+    }
+    .schedule-tab {
+      padding: 0.75rem 1.5rem;
+      background: transparent;
+      border: none;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      color: #666;
+      border-bottom: 3px solid transparent;
+      margin-bottom: -3px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .schedule-tab:hover {
+      color: var(--red, #CC0000);
+    }
+    .schedule-tab.active {
+      color: var(--red, #CC0000);
+      border-bottom-color: var(--red, #CC0000);
+    }
+    .tab-panel {
+      display: none;
+    }
+    .tab-panel.active {
+      display: block;
+    }
+
+    /* Schedule List */
+    .schedule-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .schedule-list li {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #e5e5e5;
+      line-height: 1.5;
+    }
+    .schedule-list li:last-child {
+      border-bottom: none;
+    }
+    .schedule-list li strong {
+      color: var(--red, #CC0000);
+    }
+    .schedule-list .home-event {
+      background: rgba(178, 34, 52, 0.05);
+      border-left: 3px solid var(--red, #CC0000);
+    }
+    .schedule-list .vb-tag {
+      display: inline-block;
+      background: var(--dark, #1a1a1a);
+      color: #fff;
+      font-size: 0.7rem;
+      padding: 0.1rem 0.4rem;
+      border-radius: 3px;
+      margin-right: 0.25rem;
+      vertical-align: middle;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Accordion */
+    .accordion-item {
+      border: 1px solid #ddd;
+      border-radius: var(--radius, 6px);
+      margin-bottom: 0.5rem;
+      overflow: hidden;
+    }
+    .accordion-header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.25rem;
+      background: #f5f5f5;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 600;
+      text-align: left;
+      transition: background 0.2s;
+    }
+    .accordion-header:hover {
+      background: #eee;
+    }
+    .accordion-header::after {
+      content: "+";
+      font-size: 1.25rem;
+      font-weight: 700;
+      transition: transform 0.2s;
+    }
+    .accordion-item.open .accordion-header::after {
+      content: "\2212";
+    }
+    .accordion-body {
+      display: none;
+      padding: 1rem 1.25rem;
+    }
+    .accordion-item.open .accordion-body {
+      display: block;
+    }
+
+    /* Calendar section */
+    .calendar-section {
+      text-align: center;
+      padding: 2rem;
+      background: #f9f9f9;
+      border-radius: var(--radius, 6px);
+      margin-top: 2rem;
+    }
+    .calendar-section a {
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="site-brand">McLean <span>Highlanders</span> Wrestling</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="roster.html">Roster</a></li>
+          <li><a href="history.html">Program History</a></li>
+          <li><a href="parents.html">Parents & Info</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="staff.html">Staff</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>Schedule</h1>
+      <p>2025-2026 Season</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="schedule-tabs" role="tablist">
+        <button class="schedule-tab active" role="tab" aria-selected="true" data-tab="varsity">Varsity</button>
+        <button class="schedule-tab" role="tab" aria-selected="false" data-tab="girls">Girls</button>
+        <button class="schedule-tab" role="tab" aria-selected="false" data-tab="jv">JV</button>
+      </div>
+
+      <!-- VARSITY -->
+      <div id="tab-varsity" class="tab-panel active" role="tabpanel">
+        <h3>2025-2026 Varsity Schedule</h3>
+        <ul class="schedule-list">
+          <li><strong>Mon Nov 10</strong> &mdash; 1st Day of Practice</li>
+          <li><strong>Fri Nov 14</strong> &mdash; Hydration Test (Returners)</li>
+          <li><strong>Sat Nov 22</strong> &mdash; Scrimmage @ Westfield HS, Chantilly</li>
+          <li class="home-event"><strong>Sat Nov 29</strong> &mdash; Alumni Appreciation Event: Red &amp; Silver Match, 12-2pm @ McLean HS</li>
+          <li class="home-event"><strong>Wed Dec 3</strong> &mdash; Dual: Meridian @ McLean HS</li>
+          <li><strong>Fri-Sat Dec 5-6</strong> &mdash; NOVA CLASSIC @ Fairfax HS / <span class="vb-tag">VB</span> Greg Stanley Memorial @ Brentsville District HS</li>
+          <li><strong>Wed Dec 10 <em>(rescheduled to Dec 11)</em></strong> &mdash; Mike Gleason Memorial Charity Duals 6pm vs Oakton and Lewis</li>
+          <li><strong>Sat Dec 13</strong> &mdash; The Marines Battle @ Battlefield HS, Haymarket</li>
+          <li><span class="vb-tag">VB</span> <strong>Fri-Sat Dec 12-13</strong> &mdash; Capital Duals @ Hayfield, Alexandria</li>
+          <li><span class="vb-tag">VB</span> <strong>Sat Dec 20</strong> &mdash; Cavalier Classic @ C.G. Woodson HS, Fairfax</li>
+          <li><strong>Mon-Tue Dec 29-30</strong> &mdash; Battle at the Bridge (Girls Battle on 30th only) @ Woodbridge Senior HS</li>
+          <li><strong>Sat Jan 3</strong> &mdash; 11th Annual Joe Verciglio Memorial @ Chantilly HS</li>
+          <li><span class="vb-tag">VB</span> <strong>Fri-Sat Jan 2-3</strong> &mdash; 7th Annual Coach Tommy Legge Memorial "Atlee Tournament" @ Atlee HS, Mechanicsville</li>
+          <li><strong>Thu Jan 8</strong> &mdash; District Tri: Herndon &amp; Wakefield @ Wakefield HS, Arlington</li>
+          <li><strong>Sat Jan 10</strong> &mdash; Freedom Duals @ Freedom HS (South Riding)</li>
+          <li><strong>Wed Jan 14</strong> &mdash; District Dual: Yorktown @ Yorktown HS, Arlington</li>
+          <li class="home-event"><strong>Sat Jan 17</strong> &mdash; HIGHLANDER DUALS @ McLean HS</li>
+          <li><strong>Wed Jan 21</strong> &mdash; District Tri: GCM &amp; W-L @ Washington-Liberty HS, Arlington</li>
+          <li class="home-event"><strong>Wed Jan 28</strong> &mdash; SENIOR NIGHT: Langley Dual @ McLean</li>
+          <li><span class="vb-tag">VB</span> <strong>Wed Feb 4</strong> &mdash; Meridian Quad @ Meridian HS, Falls Church</li>
+          <li><strong>Sat Feb 7</strong> &mdash; Liberty District Tournament @ Langley HS, McLean</li>
+          <li><strong>Thu Feb 12</strong> &mdash; Region Tournament @ Centreville HS</li>
+          <li><strong>Fri-Sat Feb 20-21</strong> &mdash; Virginia 6A State Tournament @ VA Beach Sports Complex</li>
+        </ul>
+      </div>
+
+      <!-- GIRLS -->
+      <div id="tab-girls" class="tab-panel" role="tabpanel">
+        <h3>2025-2026 Girls Schedule</h3>
+        <ul class="schedule-list">
+          <li class="home-event"><strong>Mon Nov 10</strong> &mdash; First Day of Practice @ McLean 3:30p</li>
+          <li><strong>Tue Nov 18</strong> &mdash; Picture Day / Hydration / Meet Coaches Night 6pm</li>
+          <li><strong>Sat Nov 22</strong> &mdash; Scrimmage: Spartan Scramble @ West Springfield HS 9a-12p</li>
+          <li class="home-event"><strong>Tue Nov 25</strong> &mdash; Scrimmage @ McLean 4p-6p</li>
+          <li class="home-event"><strong>Sat Nov 29</strong> &mdash; Red &amp; Silver Match @ McLean 12p-2p</li>
+          <li><strong>Wed Dec 3</strong> &mdash; JV Jamboree @ Chantilly HS 6p-9p</li>
+          <li><strong>Sat Dec 6</strong> &mdash; Queen of the Ring @ Herndon HS</li>
+          <li><strong>Wed Dec 10</strong> &mdash; JV Jamboree @ Fairfax HS 6p-9p</li>
+          <li><strong>Sat Dec 13</strong> &mdash; Madison Mash-up @ James Madison HS, Vienna</li>
+          <li><strong>Wed Dec 17</strong> &mdash; JV Jamboree @ W-L, Arlington 6p-9p</li>
+          <li><strong>Sat Dec 20</strong> &mdash; Vic Blue Invitational @ Wakefield HS, Arlington</li>
+          <li><strong>Tue Dec 30</strong> &mdash; Girls Battle at the Bridge @ Woodbridge SHS</li>
+          <li><strong>Sat Jan 10</strong> &mdash; La Luchadora @ John R Lewis HS, Springfield</li>
+          <li><strong>Sat Jan 17</strong> &mdash; All-Girls Tournament @ Mount Vernon HS / Highlander Duals</li>
+          <li><strong>Sat Jan 24</strong> &mdash; Mustang Girls Grapplers Gauntlet @ Meridian HS / JV Districts</li>
+          <li><strong>Sat Feb 14</strong> &mdash; Varsity Girls District @ Herndon HS</li>
+          <li><strong>Fri-Sat Jan 30-31</strong> &mdash; Girls Zone Qualifier @ Hayfield Secondary</li>
+          <li><strong>Tue-Wed Feb 24-25</strong> &mdash; Girls State Tournament @ Henrico Sports Center, Glen Allen</li>
+        </ul>
+      </div>
+
+      <!-- JV -->
+      <div id="tab-jv" class="tab-panel" role="tabpanel">
+        <h3>2025-2026 JV Schedule</h3>
+        <ul class="schedule-list">
+          <li><strong>Wed Dec 3</strong> &mdash; JV Jamboree Week 1 @ Chantilly 6p-9p</li>
+          <li><strong>Wed Dec 10</strong> &mdash; JV Jamboree Week 2 @ Fairfax 6p-9p</li>
+          <li><strong>Wed Dec 17</strong> &mdash; JV Jamboree Week 3 @ W-L 6p-9p</li>
+          <li><strong>Sat Dec 20</strong> &mdash; Vic Blue Invitational @ Wakefield</li>
+          <li><strong>Mon Dec 22</strong> &mdash; Saxon Invitational @ Langley</li>
+          <li><strong>Sat Jan 10</strong> &mdash; Jim Mon Memorial Tournament @ W-L</li>
+          <li><strong>Wed Jan 14</strong> &mdash; McLean @ Yorktown Dual 6pm</li>
+          <li class="home-event"><strong>Sat Jan 17</strong> &mdash; Working Highlander Duals @ McLean</li>
+          <li class="home-event"><strong>Sat Jan 24</strong> &mdash; JV Liberty District @ McLean</li>
+          <li class="home-event"><strong>Wed Jan 28</strong> &mdash; Langley @ McLean Dual 6pm</li>
+          <li><strong>Sat Jan 31</strong> &mdash; JV Championships of the World @ Westfield</li>
+        </ul>
+      </div>
+
+      <!-- Google Calendar -->
+      <div class="calendar-section">
+        <h3>Team Calendar</h3>
+        <p>Stay up to date with all McLean Wrestling events, practices, and tournaments.</p>
+        <p class="mt-1">
+          <a href="https://calendar.google.com/calendar/u/0?cid=mcleanwrestling@gmail.com" target="_blank" class="btn btn-primary">
+            Click here to add/subscribe to McLean Wrestling Calendar
+          </a>
+        </p>
+        <div style="margin-top:1.5rem;">
+          <iframe src="https://calendar.google.com/calendar/embed?src=mcleanwrestling%40gmail.com&ctz=America%2FNew_York" style="border:0;width:100%;max-width:800px;height:500px;" frameborder="0" scrolling="no" title="McLean Wrestling Google Calendar"></iframe>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Past Seasons -->
+  <section class="section section--alt">
+    <div class="container">
+      <h2 class="section-title">Past Seasons</h2>
+
+      <div class="accordion-item">
+        <button class="accordion-header">2024-2025 Season</button>
+        <div class="accordion-body">
+          <ul class="schedule-list">
+            <li><strong>Nov 11</strong> &mdash; 1st Day of Practice</li>
+            <li><strong>Nov 23</strong> &mdash; Red &amp; Silver Match / Alumni Appreciation Event @ McLean HS</li>
+            <li><strong>Dec 6-7</strong> &mdash; NOVA Classic @ Fairfax HS</li>
+            <li><strong>Dec 14</strong> &mdash; The Marines Battle @ Battlefield HS, Haymarket</li>
+            <li><strong>Dec 28-29</strong> &mdash; Battle at the Bridge @ Woodbridge Senior HS</li>
+            <li><strong>Jan 4</strong> &mdash; 10th Annual Joe Verciglio Memorial @ Chantilly HS</li>
+            <li><strong>Jan 18</strong> &mdash; Highlander Duals @ McLean HS</li>
+            <li><strong>Feb 1</strong> &mdash; Liberty District Tournament</li>
+            <li><strong>Feb 8</strong> &mdash; Region 6C Tournament</li>
+            <li><strong>Feb 21-22</strong> &mdash; Virginia 6A State Tournament</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header">2023-2024 Season</button>
+        <div class="accordion-body">
+          <p>Full schedule available upon request.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header">2022-2023 Season</button>
+        <div class="accordion-body">
+          <p>Full schedule available upon request.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header">2021-2022 Season</button>
+        <div class="accordion-body">
+          <p>Full schedule available upon request.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header">2020-2021 Season</button>
+        <div class="accordion-body">
+          <p>Full schedule available upon request.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header">2019-2020 Season</button>
+        <div class="accordion-body">
+          <p>Full schedule available upon request.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header">2018-2019 Season</button>
+        <div class="accordion-body">
+          <p>Full schedule available upon request.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header">2017-2018 Season</button>
+        <div class="accordion-body">
+          <p>Full schedule available upon request.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header">2016-2017 Season</button>
+        <div class="accordion-body">
+          <p>Full schedule available upon request.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header">2015-2016 Season</button>
+        <div class="accordion-body">
+          <p>Full schedule available upon request.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header">2014-2015 Season</button>
+        <div class="accordion-body">
+          <p>Full schedule available upon request.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header">2013-2014 Season</button>
+        <div class="accordion-body">
+          <p>Full schedule available upon request.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header">2012-2013 Season</button>
+        <div class="accordion-body">
+          <p>Full schedule available upon request.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>McLean Wrestling</h4>
+        <p>McLean High School<br>1633 Davidson Road<br>McLean, VA 22101</p>
+        <p class="mt-1"><a href="mailto:mcleanwrestling@gmail.com">mcleanwrestling@gmail.com</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="roster.html">Roster</a></li>
+          <li><a href="parents.html">Parents & Info</a></li>
+          <li><a href="events.html">Events & Camps</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="https://spartancombat.com/collections/mclean-wrestling-team-store" target="_blank">Team Store</a></li>
+          <li><a href="https://www.mcleanboosters.org/" target="_blank">McLean Boosters</a></li>
+          <li><a href="https://www.myathletics.org/wrestling" target="_blank">Lions Youth Wrestling</a></li>
+          <li><a href="https://checkout.square.site/buy/BRHTT5TDBIHVDWGAWLBNFHAL" target="_blank">Support Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Community</h4>
+        <ul>
+          <li><a href="https://novawc.org/" target="_blank">NOVA Wrestling Club</a></li>
+          <li><a href="https://legendwrestling.org/" target="_blank">Legend Wrestling</a></li>
+          <li><a href="https://www.arlwrestling.org/" target="_blank">Arlington Wrestling Club</a></li>
+          <li><a href="https://ericmondayfoundation.org/" target="_blank">#TakeDownTheStigma</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; McLean Highlanders Wrestling. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Schedule Tabs
+    document.querySelectorAll('.schedule-tab').forEach(function(tab) {
+      tab.addEventListener('click', function() {
+        document.querySelectorAll('.schedule-tab').forEach(function(t) {
+          t.classList.remove('active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        document.querySelectorAll('.tab-panel').forEach(function(p) {
+          p.classList.remove('active');
+        });
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+        document.getElementById('tab-' + tab.getAttribute('data-tab')).classList.add('active');
+      });
+    });
+
+    // Accordion
+    document.querySelectorAll('.accordion-header').forEach(function(header) {
+      header.addEventListener('click', function() {
+        var item = header.parentElement;
+        item.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>
