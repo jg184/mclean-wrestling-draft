@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
         buttons.forEach(b => b.classList.remove('active'));
         panels.forEach(p => p.classList.remove('active'));
         btn.classList.add('active');
-        const target = container.querySelector('#' + btn.dataset.tab);
+        const target = document.getElementById(btn.dataset.tab);
         if (target) target.classList.add('active');
       });
     });
