@@ -34,13 +34,11 @@ document.addEventListener('DOMContentLoaded', () => {
     header.addEventListener('click', () => {
       const body = header.nextElementSibling;
       const isOpen = body.classList.contains('open');
-      // Optional: close siblings
-      const parent = header.closest('.accordion-group');
-      if (parent) {
-        parent.querySelectorAll('.accordion-body').forEach(b => b.classList.remove('open'));
-        parent.querySelectorAll('.accordion-header').forEach(h => h.classList.remove('active'));
-      }
-      if (!isOpen) {
+      // Toggle: close if open, open if closed
+      if (isOpen) {
+        body.classList.remove('open');
+        header.classList.remove('active');
+      } else {
         body.classList.add('open');
         header.classList.add('active');
       }
